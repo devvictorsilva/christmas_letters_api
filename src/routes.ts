@@ -7,6 +7,7 @@ const router = express.Router();
 const codeController = new CodeController();
 const letterController = new LetterController();
 
+router.get('/', (req, res) => {res.send('Testin!')});
 router.post('/send-code', (req, res) => codeController.sendCode(req, res));
 router.post('/create-code', (req, res) => codeController.createCode(req, res));
 
