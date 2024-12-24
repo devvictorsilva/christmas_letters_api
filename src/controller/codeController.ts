@@ -10,9 +10,10 @@ class CodeController {
         where: {
           code_name: req.body.code,
         },
+      }).catch((error) => {
+        return error;
       })
-      console.log(req)
-      console.log(code);
+      res.send(req.body.code);
 
       if (!code) {
         return res.status(404).json(code);
