@@ -13,4 +13,4 @@ router.post('/create-code', (req, res) => codeController.createCode(req, res));
 router.post('/create-letter', (req, res) => letterController.createLetter(req, res));
 router.get('/find-letter/:id', (req, res) => letterController.getLetter(req, res));
 
-export default router;
+export default router
