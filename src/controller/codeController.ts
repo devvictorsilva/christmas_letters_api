@@ -13,7 +13,6 @@ class CodeController {
       }).catch((error) => {
         return error;
       })
-      res.send(req.body.code);
 
       if (!code) {
         return res.status(404).json(code);
