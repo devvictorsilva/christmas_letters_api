@@ -11,6 +11,8 @@ class CodeController {
           code_name: req.body.code,
         },
       })
+      console.log(req)
+      console.log(code);
 
       if (!code) {
         return res.status(404).json(code);
