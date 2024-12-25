@@ -17,23 +17,4 @@ app.use(cors({
 
 app.use(router)
 
-async function main() {
-  try {
-      const prisma = new PrismaClient();
-      await prisma.$connect();
-
-      await prisma.$disconnect();
-      
-  } catch (error) {
-      if (error instanceof Error && error.constructor.name === 'PrismaClientInitializationError') {
-          console.error('Erro de Inicialização do Prisma:', error);
-         
-      } else {
-         console.error('Erro não tratado:', error);
-      }
-  }
-}
-
-main();
-
 app.listen(port, () => `server running on port ${port}`);
