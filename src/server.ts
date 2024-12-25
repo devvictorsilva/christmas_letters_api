@@ -20,11 +20,7 @@ app.use(router)
 async function main() {
   try {
       const prisma = new PrismaClient();
-      await prisma.$connect(); // Conecta explicitamente ao banco de dados
-      
-      // Seus queries e operações no banco de dados
-      const users = await prisma.user.findMany();
-      console.log(users);
+      await prisma.$connect();
 
       await prisma.$disconnect();
       
