@@ -10,9 +10,9 @@ class CodeController {
         where: {
           code_name: req.body.code,
         },
-      }).catch((error) => {
-        return error;
       })
+
+      console.log('i')
 
       if (!code) {
         return res.status(404).json(code);
@@ -29,7 +29,7 @@ class CodeController {
         return res.status(200).json(letter);
       }
     } catch (error) {
-      return res.status(500).json({ message: 'Internal server error' });
+      return res.status(500).json({ message: error });
     }
   }
 
